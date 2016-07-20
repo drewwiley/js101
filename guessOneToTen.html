@@ -1,0 +1,31 @@
+<script type="text/javascript">
+// Make a prompt box that asks the user for a number between 1-10.
+var userInput = prompt("Please guess a number between one and ten.");
+var userInputAsANumber = Number(userInput);
+
+// Generate a random number between 1-10.
+var correctNumber = Math.floor(Math.random() * 10) + 1;
+
+// If they match, congrat the user.
+
+if (userInputAsANumber === correctNumber) {
+	console.log("Congrats! You're 1 out of 10 in my book!")
+}
+
+// If they dont, console the user and tell them what it was
+
+else if((userInputAsANumber == (correctNumber +-2) )|| (userInputAsANumber == (correctNumber +-1))) {
+	console.log("You are close. The number was " + correctNumber);
+
+}
+
+
+// - if they are wrong but not within 2, tell them they weren't close and what the nunmber was
+else if((!isNaN(userInputAsANumber))){
+	console.log("You are not close. The number is " + correctNumber);
+}
+
+else {
+	console.log("You must enter a number");
+}
+</script>

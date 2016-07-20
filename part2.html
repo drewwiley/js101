@@ -1,0 +1,188 @@
+<script type="text/javascript">
+
+
+
+	// Array
+	var students = [];
+	students = ["Shirlette", "Jacksonious", "JT", "Summer"];
+
+	var nfcSouthTeam1 = "Falcons";
+	var nfcSouthTeam2 = "Saints";
+
+	var nfcSouthTeams = ["Falcons", "Saints", "Bucs", "Panthers"]
+
+	// Any datatype can go in any position
+	// -Booleans
+	// -Numbers
+	// -Strings
+	// -Objects
+	// -Array
+	// In an array, the first element is 0
+	// students[14] = "Drew";
+	// console.dir(students);
+	// console.log(students[3]);
+
+	// Cool things you can do to an array (methods)
+	students.pop(); //This will remove the last element on the array
+	students.push("Alex"); //
+	console.dir(students);
+
+
+	// Make an array with at least 4 students in 
+
+	var theClass = ["Shirlette", "Jackson", "JT", "Summer", "Alex", "Paige", "Dave", "Eric", "Danielle", "Dan", "Danny", "Brett", "Wes", "Drew", "Daniel"];
+
+	// Prompt the user for their name
+	var userName = [];
+	// If they enter a name in the array then alert them, "You are in the class!"" Else, Ask them if they want to join
+
+	// if (userName == theClass[0]) {
+	// 	prompt("You are in the class!");
+	// }
+
+	// else if (userName == theClass[1]) {
+	// 	prompt("You are in the class!");
+	// }
+
+	// else {
+	// 	prompt("Would you like to join?");
+	// }
+
+	if (theClass.indexOf(userName) > -1) {
+		alert("I'm glad you are in class");
+	}
+
+
+// LOOPS
+// console.dir(theClass)
+// for(var i = 0; i < theClass.length; i++) {
+// 	console.dir(theClass[i]);
+// }
+
+// var dcTeam = ["Rob", "Max", "Jake", "Natalie", "Toby", "Keith"];
+// for (i=0; i < dcTeam.length; i++) {
+// 	console.log("I'm still running...")
+// 	if (userName == dcTeam[i]){
+// 		alert("You work for digital crafts");
+// 		break;
+// 	}
+// }
+
+// Strings are just arrays of characters
+// If you need to manipulate a string, you can treat it with all the array's stuff You can still use length, indexof, etc.
+
+
+
+// Given a number between 0 and 6 representing the days of the week, print "Go to work." if it's a work day and "Sleep in." if it's a weekend day
+var date = new Date();
+var dayOfWeek = date.getDay();
+
+if (dayOfWeek == (0 || 6)){
+	console.log("Sleep In");
+}
+else {
+	console.log("Go to work");
+}
+// Given a month number, between 1 and 12, and a year, print the number of days in that month - accounting for leap years.
+var month = (date.getMonth());
+var year = (date.getYear());
+
+if (month == (4 || 6 || 9 || 11)) {
+	console.log("There are 30 days in this month")
+}
+
+else if (month == 2) {
+	if (year % 4 == 0){
+		console.log("There are 29 days in this month");
+	}
+	else {
+		console.log("THere are 28 days in this month");
+	}
+}
+
+// Given the amount of a bill as a number, and a level of service - which can be "good", "fair", or "bad", print the total bill with the tip included. The amount of tip given for each level of service is defined by:
+
+var total = prompt("What is the total?")
+var quality = prompt("How was your service: good, fair, or bad?");
+var tip = [];
+var tipAsANumber = Number(tip);
+if (quality == "fair") {
+	tipAsANumber = .15
+}
+else if (quality =="good") {
+	tipAsANumber = (.20)
+}
+
+else {
+	tipAsANumber = (.10)
+}
+
+total = Number(total) + (Number(total) * tipAsANumber);
+console.log(total)
+// "good" -> 20%
+// "fair" -> 15%
+// "bad"  -> 10%
+// Like "Tip Calculator", except you are also given the number of people to divid the total into. Print the amount for each person to pay.
+
+
+
+
+// var plan1Name = "Basic";
+// var plan1Price = 3.99;
+// var plan1Space = 100;
+
+// var plan1 = ["Basic", 3.99, 100];
+plan1 = {};
+plan1.name = "Basic";
+plan1.price = 3.99;
+plan1.space = 100;
+
+var plan2 = {
+	name: "Professional",
+	price: 5.99,
+	space: 500
+}
+
+var variablePropertyName = "name";
+
+plan2.name; //Dot notation
+plan2['name'] //bracket notation
+plan2[variablePropertyName] = "Professional"; //same
+plan2.variablePropertyName = "Doesn't Matter";
+
+console.log(plan2.name); //Professional
+console.log(plan1.space); //100
+
+plan1.calcAnnual = function(percent) {
+	console.log(percent / 12 /100);
+}
+
+plan1.calcAnnual(50);
+
+
+var theClass = [
+	{name:"Shirlette",
+	hometown: "Morganton"},
+	{name:"Jackson",
+	favoriteVideoGame: "Just Cause 3"},
+	{name: "JT"},
+	{name: "Summer"},
+	{name: "Alex"}, 
+	{name: "Paige"}, 
+	{name: "Dave"},
+	{name: "Eric"},
+	{name: "Danielle"}, 
+	{name: "Dan"},
+	{name: "Danny"}, 
+	{name: "Brett"},
+	{name: "Wes"}, 
+	{name: "Drew"}, 
+	{name: "Daniel"}
+	];
+
+// console.log(theClass[13].name);
+
+for (i = 0; i <theClass.length; i++) {
+	console.log(theClass[i].name);
+}
+</script>

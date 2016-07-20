@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Fight the Dragon</title>
+
+</head>
+<body>
+
+<!-- 1. Put the dragon on the screen.
+2. Give the user instructions that they must fight or flee and a button for each.
+3. Instruct the user that if they choose to fight, they must roll a 9 or higher or they will be burnt to a crisp!
+4. If they flee, change the image of the dragon to the coward fleeing and mock the user for cowardice!
+5. If they choose to fight, they must roll the dice. Update the dice to reflect their roll. Display on the screen what they rolled As well as the outcome.
+
+Bonus
+6. Using a while loop, keep the game going as long as each character has hit points. Start the dragon at 20 and the hero at 20. Add a roll for the dragon. Subtract the hit points for each after the "fight" (roll). The while loop should terminate when one member of the fight drops below 0.
+Super Bonus
+7. Create other options within the game. For instance,
+7a. Allow the user one chance in the while loop to "attack with bravery" which will increase the damage done by 4, but will increase damage by 4. 
+7b. Allow the user one chance to drink a health potion and increase their health back to 20.
+7c. Allow the dragon to randomly get distracted by how shiny the hero's armor is and forget to attack.
+7d. As the hero is more wounded, decreases his rolls so he does less damage.
+ -->
+<img name="dragon" src="dragon.png">
+<div id="game">
+
+	<img name="die1" src="d1.gif">
+	<img name="die2" src="d1.gif">
+
+<!-- 	<input type="button" onclick="rollDice();" value="Roll the dice!"> -->
+
+</div>
+Choose whether you would like to fight the dragon or flee. If you fight, you must roll a 9 or higher or you will be burnt to a 
+
+<br>
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
+<input type="button" class="button" onclick="rollDice()" value="Fight">
+<input type="button" class="button" onclick="flee()" value="Flee">
+
+<script type="text/javascript">
+
+// document.getElementById('die1');
+
+function flee() {
+
+document.write("You are a coward");
+document.write("<img src='lion.jpg' alt='lion'>");
+
+
+}
+
+function rollDice() {
+	var randomDie1 = Math.floor(Math.random() * 6) + 1;
+	var randomDie2 = Math.floor(Math.random() * 6) + 1;
+	
+	console.log(randomDie1);
+	console.log(randomDie2);
+	console.dir(document.images);
+
+	document.images.die1.src = 'd' + randomDie1 + '.gif';
+	document.images.die2.src = 'd' + randomDie2 + '.gif';
+	
+
+	function checkDie() {
+		var dieTotal = (randomDie1 + randomDie2);
+		if (dieTotal < 9) {
+			alert("Sorry. You've been burnt to a crisp")
+		
+		}
+
+		else {
+			alert("Congrats. You defeated the dragon. Continue your fight, dragon-slayer.");		}
+
+		}
+	checkDie();
+	}
+
+	
+
+
+
+
+</script>
+
+
+</body>
+</html>
